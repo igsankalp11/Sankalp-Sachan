@@ -1,0 +1,25 @@
+adb devives
+
+adb shell
+
+adb reboot bootloader
+
+fastboot devices
+
+fastboot boot <drop file location>
+
+pm list packages
+
+pm uninstall -k --user 0 <app package name>
+
+adb uninstall <package_name>
+
+su -c pm uninstall [-k] <package_name>
+
+adb shell pm uninstall --user 0 <package_name>
+
+pm install --user 0 $(pm dump <package name> | awk '/path/{ print $2 }')
+
+adb shell pm disable <package name>
+
+pm install-existing <package name>
